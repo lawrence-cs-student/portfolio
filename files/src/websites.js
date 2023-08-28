@@ -2,7 +2,7 @@
 const websites = [
     {
         id: 1,
-        image: "web1.png",
+        image: "web1.PNG",
         stacks: "HTML CSS REACT",
         link: "https://ice-cream-app-one.vercel.app/"
     },
