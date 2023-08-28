@@ -219,9 +219,6 @@ body {
     background-color: var(--color-2);
 }
 
-.hero-cover {
-    height: 100vh;
-}
 
 /* Navbar Section */
 
@@ -278,6 +275,7 @@ body {
     font-size: 30px;
     color: var(--color-3);
     text-align: justify;
+    line-height: 1.5;
 
 }
     
