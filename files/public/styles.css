@@ -1,0 +1,360 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0 ;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-1: #F0DFDF;
+    --color-2: #27374D;
+    --color-3: #FFFFFF;
+    --color-4: #DF3E43;
+    --text-size-small: 12px;
+    --text-size-medium: 16px;
+    --text-size-large: 18px;
+    --text-size-xl: 24px
+    --text-family: 'Inter', sans-serif; 
+}
+
+body {
+    background-color: aqua;
+    margin: 0;
+}
+
+/* Navbar Section */
+
+.navbar {
+    display: flex;
+    gap: 3%;
+    width: 100%;
+    padding: 1% 10% 1% 10%;
+    height: auto;
+}
+
+.navbar a {
+    font-family: var(--text-family);
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--color-3);
+    font-size: var(--text-size-large);
+    transition: transform 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+
+/* Hero Section */
+
+
+.hero-cover {
+    width: 100%;
+    height: auto;
+}
+
+
+.hero-cover {
+    --bg-image: url("https://images.unsplash.com/photo-1509343256512-d77a5cb3791b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
+    --bg-opacity: 0.3;
+    background-color: var(--color-2);
+    height: auto;
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-cover::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: var(--bg-image);
+    opacity: var(--bg-opacity);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.hero {
+    display: flex;
+    gap: 10%;
+    height: 100%;
+    padding: 10% 10% 10% 10%;
+    
+}
+
+.hero h1 {
+    font-family: var(--text-family);
+    font-size: var(--text-size-medium);
+    color: var(--color-3);
+    
+    
+}
+
+.hero p {
+    font-size: var(--text-size-medium);
+    color: var(--color-3);
+}
+
+
+.hero img {
+    display: none;
+}
+
+
+/* Skills Section */
+
+#skills {
+    background-color: var(--color-3);
+    padding: 10%;
+}
+
+#skills > div:nth-child(2) {
+    width: 150px;
+    background-color: #DF3E43;
+    height: 15px;
+}
+
+#skills > div:nth-child(3) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 5%;
+    margin-top: 10%;
+}
+
+#skills svg {
+    height: 30px;
+    width: 30px;
+    animation: bounce 2.5s ease-in-out infinite;
+}
+
+#skills > div:nth-child(3) div {
+    width: 25%;
+    margin-bottom: 4%;
+}
+
+#skills p {
+    margin-bottom: 50%;
+    font-size: var(--text-size-small);
+    font-family: var(--text-family);
+    font-weight: bold;
+}
+
+#skills h1 {
+    font-family: var(--text-family);
+    font-size: var(--text-size-xl);
+    font-weight: 800;
+}
+
+
+/* Projects Section */
+
+#projects {
+    background-color: var(--color-2);
+    padding: 5% 10%;
+}
+
+#projects .cards {
+    width: 100%;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+}
+
+.cards .duplicate {
+    width: 100%;
+}
+
+.cards .duplicate > * {
+    width: 100%;
+    background-color: #5B67CA;
+}
+
+#projects img {
+    width: 100%;
+}
+
+
+@media (min-width: 1025px)  {
+   
+#body {
+    width: 100%;
+    background-color: var(--color-2);
+}
+
+
+/* Hero Section */ 
+
+.hero {
+    display: flex;
+    gap: 10%;
+    height: 100%;
+    padding: 2.5% 10% 0 10%;
+    justify-content: space-between;
+}
+
+.hero > div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 20%;
+}
+
+.hero > img {
+    width: 30%;
+    height: 100%;
+}
+
+.hero h1 {
+    font-family: var(--text-family);
+    font-size: var(--text-size-large);
+    color: var(--color-3);
+    text-align: end;
+    position: relative;
+    left: 5%;
+    
+}
+
+.hero p {
+    font-size: var(--text-size-large);
+    color: var(--color-3);
+    text-align: justify;
+
+}
+    
+/* Skills Section */
+
+#skills {
+    background-color: var(--color-3);
+    padding: 10%;
+}
+
+#skills > div:nth-child(2) {
+    width: 300px;
+    background-color: #DF3E43;
+    height: 20px;
+}
+
+#skills > div:nth-child(3) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    gap: 10%;
+    margin-top: 3%;
+}
+
+#skills svg {
+    height: 70px;
+    width: 70px;
+    animation: bounce 2.5s ease-in-out infinite;
+}
+
+#skills p {
+    margin-bottom: 50%;
+    font-size: 24px;
+    font-family: var(--text-family);
+    font-weight: bold;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Projects Section */
+
+#projects {
+    background-color: var(--color-2);
+    display: flex;
+    flex-direction: column;
+    padding: 5% 10% 5% 10%;
+    height: auto;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+}
+
+.cards > div {
+    width: 30%;
+    height: 70%;
+    background-color: #5B67CA;
+    
+}
+
+.cards > div > div {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-1);
+    transition: transform 0.2s ease-in-out;
+}
+
+#projects > h1:first-child{
+    font-family: var(--text-family);
+    color: var(--color-1);
+    align-self: flex-end;
+    margin-bottom: 5%;
+}
+
+
+.cards > div > div:hover {
+    transform: translateX(-20px) translateY(25px);
+    
+}
+
+#projects img {
+    width: 100%;
+    height: max-content;
+}
+
+.cards h1 {
+    color: var(--color-2);
+    font-family: var(--text-family);
+    font-size: var(--text-size-medium);
+}
+
+
+
+.cards > div:nth-child(4) {
+    margin-top: 5%;
+} 
+
+/* Footer Section */
+
+footer {
+    background-color: var(--color-3);
+    display: flex;
+    height: auto;
+    justify-content: space-between;
+    padding: 3% 10% 3% 10%;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70%;
+}
+
+footer a > svg {
+    height: 40px;
+    width: 40px;
+} 
+}
