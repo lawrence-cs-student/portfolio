@@ -14,7 +14,7 @@ export default function App () {
             </div>
             <Skills />
             <Projects />
-            {/* <Footer /> */}
+            <Footer />
         </div>
     )
 }
