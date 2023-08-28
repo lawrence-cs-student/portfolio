@@ -1,12 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
 
-* {
-    padding: 0;
-    margin: 0 ;
-    box-sizing: border-box;
-}
-
 :root {
     --color-1: #F0DFDF;
     --color-2: #27374D;
@@ -19,8 +13,15 @@
     --text-family: 'Inter', sans-serif; 
 }
 
-body {
-    background-color: aqua;
+* {
+    padding: 0;
+    margin: 0 ;
+    box-sizing: border-box;
+    font-family: var(--text-family);
+}
+
+
+body {     
     margin: 0;
 }
 
@@ -35,12 +36,10 @@ body {
 }
 
 .navbar a {
-    font-family: var(--text-family);
     font-weight: 600;
     cursor: pointer;
     color: var(--color-3);
     font-size: var(--text-size-large);
-    transition: transform 0.3s ease-in-out;
     text-decoration: none;
 }
 
@@ -56,7 +55,7 @@ body {
 
 .hero-cover {
     --bg-image: url("https://images.unsplash.com/photo-1509343256512-d77a5cb3791b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
-    --bg-opacity: 0.3;
+    --bg-opacity: 0.1;
     background-color: var(--color-2);
     height: auto;
     position: relative;
@@ -81,21 +80,19 @@ body {
     display: flex;
     gap: 10%;
     height: 100%;
-    padding: 10% 10% 10% 10%;
+    padding: 12% 10%;
     
 }
 
 .hero h1 {
-    font-family: var(--text-family);
     font-size: var(--text-size-medium);
     color: var(--color-3);
-    
-    
 }
 
 .hero p {
     font-size: var(--text-size-medium);
     color: var(--color-3);
+    text-align: justify;
 }
 
 
@@ -121,30 +118,27 @@ body {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    gap: 5%;
+    gap: 1%;
     margin-top: 10%;
 }
 
 #skills svg {
     height: 30px;
     width: 30px;
-    animation: bounce 2.5s ease-in-out infinite;
 }
 
 #skills > div:nth-child(3) div {
     width: 25%;
-    margin-bottom: 4%;
+    height: 60px;
 }
 
 #skills p {
     margin-bottom: 50%;
     font-size: var(--text-size-small);
-    font-family: var(--text-family);
     font-weight: bold;
 }
 
 #skills h1 {
-    font-family: var(--text-family);
     font-size: var(--text-size-xl);
     font-weight: 800;
 }
@@ -155,6 +149,8 @@ body {
 #projects {
     background-color: var(--color-2);
     padding: 5% 10%;
+    display: flex;
+    flex-direction: column;
 }
 
 #projects .cards {
@@ -164,6 +160,7 @@ body {
 .cards {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
 .cards .duplicate {
@@ -172,11 +169,46 @@ body {
 
 .cards .duplicate > * {
     width: 100%;
-    background-color: #5B67CA;
+}
+
+.duplicate h1 {
+    font-size: var(--text-size-xl);
+    font-weight: 900;
+    color: var(--color-3);
 }
 
 #projects img {
     width: 100%;
+}
+
+#projects > h1:first-child{
+    color: var(--color-1);
+    align-self: flex-end;
+    margin-bottom: 5%;
+    font-size: 30px;
+}
+
+/* Footer Section */
+
+#footer {
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
+    gap: 20px;
+}
+
+#footer a {
+    width: 50px;
+    height: 20px;
+}
+
+#footer h1 {
+    font-size: var(--text-size-small);
+}
+
+#footer div {
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -187,11 +219,30 @@ body {
     background-color: var(--color-2);
 }
 
+.hero-cover {
+    height: 100vh;
+}
+
+/* Navbar Section */
+
+.navbar {
+    justify-content: flex-end;
+}
+
+.navbar a {
+    font-size: 30px;
+    font-weight: bolder;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    color: chocolate;
+    transform: translateY(-3px);
+}
 
 /* Hero Section */ 
 
 .hero {
-    display: flex;
     gap: 10%;
     height: 100%;
     padding: 2.5% 10% 0 10%;
@@ -211,20 +262,20 @@ body {
 .hero > img {
     width: 30%;
     height: 100%;
+    display: block;
 }
 
 .hero h1 {
-    font-family: var(--text-family);
-    font-size: var(--text-size-large);
-    color: var(--color-3);
+    font-size: 35px;
+    color: var(--color-1);
     text-align: end;
     position: relative;
-    left: 5%;
+    left: 9%;
     
 }
 
 .hero p {
-    font-size: var(--text-size-large);
+    font-size: 30px;
     color: var(--color-3);
     text-align: justify;
 
@@ -237,6 +288,11 @@ body {
     padding: 10%;
 }
 
+#skills h1 {
+    font-size: 40px;
+    font-weight: bolder;
+}
+
 #skills > div:nth-child(2) {
     width: 300px;
     background-color: #DF3E43;
@@ -244,11 +300,17 @@ body {
 }
 
 #skills > div:nth-child(3) {
-    display: flex;
     flex-wrap: wrap;
     width: 60%;
-    gap: 10%;
+    gap: 2%;
     margin-top: 3%;
+    height: auto;
+}
+
+#skills > div:nth-child(3) div {
+    margin-bottom: 10px;
+    min-height: 120px;
+    width: 20%;
 }
 
 #skills svg {
@@ -260,7 +322,6 @@ body {
 #skills p {
     margin-bottom: 50%;
     font-size: 24px;
-    font-family: var(--text-family);
     font-weight: bold;
 }
 
@@ -280,7 +341,6 @@ body {
 
 #projects {
     background-color: var(--color-2);
-    display: flex;
     flex-direction: column;
     padding: 5% 10% 5% 10%;
     height: auto;
@@ -288,18 +348,20 @@ body {
 
 .cards {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     gap: 5%;
+
 }
 
-.cards > div {
+.cards .duplicate {
     width: 30%;
     height: 70%;
-    background-color: #5B67CA;
+    background-color: var(--color-3);
     
 }
 
-.cards > div > div {
+.cards .duplicate > * {
     width: 100%;
     height: 100%;
     background-color: var(--color-1);
@@ -307,16 +369,15 @@ body {
 }
 
 #projects > h1:first-child{
-    font-family: var(--text-family);
     color: var(--color-1);
+    font-size: 45px;
     align-self: flex-end;
     margin-bottom: 5%;
 }
 
 
-.cards > div > div:hover {
-    transform: translateX(-20px) translateY(25px);
-    
+.cards > .duplicate > *:hover {
+    transform: translateX(-15px) translateY(20px);  
 }
 
 #projects img {
@@ -326,11 +387,8 @@ body {
 
 .cards h1 {
     color: var(--color-2);
-    font-family: var(--text-family);
-    font-size: var(--text-size-medium);
+    font-size: var(--text-size-xl);
 }
-
-
 
 .cards > div:nth-child(4) {
     margin-top: 5%;
@@ -338,23 +396,25 @@ body {
 
 /* Footer Section */
 
-footer {
+#footer {
+    flex-direction: row;
     background-color: var(--color-3);
-    display: flex;
-    height: auto;
+    padding: 10%;
     justify-content: space-between;
-    padding: 3% 10% 3% 10%;
 }
 
-footer div {
-    display: flex;
+#footer svg {
+    width: 50px;
+    height: 50px;
+}
+
+#footer div {
     flex-direction: column;
     align-items: center;
-    height: 70%;
+    gap: 20px;
 }
 
-footer a > svg {
-    height: 40px;
-    width: 40px;
-} 
+#footer h1 {
+    font-size: 35px;
+}
 }
